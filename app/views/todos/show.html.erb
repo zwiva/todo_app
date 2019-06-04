@@ -1,5 +1,5 @@
-<br>
-<p>Este es la ToDo: <%= @todo.description %></p>
+<div class="jumbotron", style="background-color: #FDCD59">
+<p>Esta es la ToDo: <%= @todo.description %></p>
 <p>¿Esta completada?: <% if @todo.completed == true %> 
      Si
     <% else %>
@@ -7,4 +7,5 @@
     <%end%>
 </p>
 <br>
-<%= link_to 'Volver a Todos las ToDo', todos_path %>
+<%= link_to 'Volver a Todos las ToDo', todos_path, class: 'btn btn-primary' %>
+</div>
