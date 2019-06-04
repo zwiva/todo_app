@@ -1,0 +1,12 @@
+
+    <% @todos.each do |todo| %>
+        <div class='card card-body bg-light'>
+            <%= todo.description %>
+            <p> ¿Completada?: 
+                <% if todo.completed == true %> 
+                Si, por supuesto.
+                <% else %>
+                No, pendiente.
+                <% end %> </p>
+        </div>
+    <% end %>
