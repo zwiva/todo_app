@@ -1,23 +1,23 @@
     <br>
+    <h3 class = "text-center font-weight-bolder text-white"> Estos son todos tus ToDo</h3>
+    <br>
     <% @todos.each do |todo| %>
-        <div class='card card-body bg-light'>
+        <div class='card card-body'>
             <div>
-            <p> Detalles: <%= todo.description %> </p>
-            <p> ¿Completada?: 
+            <h5> <span class = "font-weight-bolder", style = "color: gray"> Detalles: </span> <%= todo.description %></h5>
+            <h5> <span class = "font-weight-bolder", style = "color: gray"> ¿Completada?: </span> 
                 <% if todo.completed == true %> 
-                Si, por supuesto.
+                <span style="color: "> Si, por supuesto.</span> 
                 <% else %>
-                No, pendiente.
-                <% end %> </p>
-            </div>
-            <div>
+                <span style="color: "> No, pendiente.</span>
+                <% end %> 
+                <%= link_to 'Completar', complete_path(todo), method: :completed, class:'btn btn-sm text-white', style:'background-color:#F48C46' %></h5>
                 <%= link_to 'Show', todo, class:'btn btn-warning btn-sm' %>
                 <%= link_to 'Edit', edit_path(todo), class:'btn btn-warning btn-sm' %>
                 <%= link_to 'borrar', todo, method: :delete, class:'btn btn-warning btn-sm' %>
-                <%= link_to 'Completado', complete_path(todo), method: :completed, class:'btn btn-success btn-sm'  %>
             </div>
-
         </div>
+        <br>
     <% end %>
     
     <br><%= link_to 'Crear ToDo', todos_new_path, class: 'btn btn-secondary' %>

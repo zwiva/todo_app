@@ -12,11 +12,33 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  <%#agregar navbar aca!!%>
+  <body style="background-color: #FFA500">
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top text-white", style="background-color: #ff7400">
+       <a class="navbar-brand font-weight-bold">ToDo</a>
+     <%#   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>%>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to 'Todos tus ToDo', todos_path, class:'nav-link text-white' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Status list', todos_list_path, class:'nav-link text-white'%>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Nuevo ToDo', todos_new_path, class:'nav-link text-white'%>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <div class = "container">
-    <%= yield %>
+      <div class="jumbotron", style="background-color: #FFA500">
+        <%= yield %>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
