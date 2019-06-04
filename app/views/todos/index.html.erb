@@ -1,4 +1,4 @@
-
+    <br>
     <% @todos.each do |todo| %>
         <div class='card card-body bg-light'>
             <%= todo.description %>
@@ -10,3 +10,5 @@
                 <% end %> </p>
         </div>
     <% end %>
+    
+    <br><%= link_to 'Crear ToDo', todos_new_path, class: 'btn btn-secondary' %>
