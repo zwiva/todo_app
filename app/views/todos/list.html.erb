@@ -1,0 +1,41 @@
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+        <h2>No completados!</h2>
+            <% @todos.each do |todo| %>        
+                <% if !todo.completed == true %>
+                    <div class='card card-body bg-light'>
+                        <div>
+                        <p> Detalles: <%= todo.description %> </p>
+                        <p> ¿Completada?: 
+                            <% if todo.completed == true %> 
+                            Si, por supuesto.
+                            <% else %>
+                            No, pendiente.
+                            <% end %> </p>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="col-sm-6">
+        <h2>Completados!</h2>
+            <% @todos.each do |todo| %>        
+                <% if todo.completed == true %>
+                    <div class='card card-body bg-light'>
+                        <div>
+                        <p> Detalles: <%= todo.description %> </p>
+                        <p> ¿Completada?: 
+                            <% if todo.completed == true %> 
+                            Si, por supuesto.
+                            <% else %>
+                            No, pendiente.
+                            <% end %> </p>
+                        </div>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+</div>

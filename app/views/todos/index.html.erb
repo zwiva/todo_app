@@ -12,8 +12,9 @@
             </div>
             <div>
                 <%= link_to 'Show', todo, class:'btn btn-warning btn-sm' %>
-                <%= link_to 'Edit', edit_path(todo) %>
-                <%= link_to 'borrar', todo, method: :delete %>
+                <%= link_to 'Edit', edit_path(todo), class:'btn btn-warning btn-sm' %>
+                <%= link_to 'borrar', todo, method: :delete, class:'btn btn-warning btn-sm' %>
+                <%= link_to 'Completado', complete_path(todo), method: :completed, class:'btn btn-success btn-sm'  %>
             </div>
 
         </div>
