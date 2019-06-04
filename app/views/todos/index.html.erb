@@ -1,13 +1,21 @@
     <br>
     <% @todos.each do |todo| %>
         <div class='card card-body bg-light'>
-            <%= todo.description %>
+            <div>
+            <p> Detalles: <%= todo.description %> </p>
             <p> ¿Completada?: 
                 <% if todo.completed == true %> 
                 Si, por supuesto.
                 <% else %>
                 No, pendiente.
                 <% end %> </p>
+            </div>
+            <div>
+                <%= link_to 'Show', todo, class:'btn btn-warning btn-sm' %>
+
+                
+            </div>
+
         </div>
     <% end %>
     

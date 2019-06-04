@@ -1,0 +1,10 @@
+<br>
+<p>Este es la ToDo: <%= @todo.description %></p>
+<p>¿Esta completada?: <% if @todo.completed == true %> 
+     Si
+    <% else %>
+     No
+    <%end%>
+</p>
+<br>
+<%= link_to 'Volver a Todos las ToDo', todos_path %>
